@@ -32,7 +32,7 @@ pub async fn music_command(ctx: Context, cmd: ApplicationCommandInteraction) {
         .expect("value")
     {
         let music = Music::new(string.as_bytes());
-        let mut player = Player::new(SquareWave::new(44800));
+        let mut player = Player::new(SquareWave::new(22050));
         player.play(&music);
         if let Err(error) = cmd
             .create_interaction_response(ctx.http, move |response| {
