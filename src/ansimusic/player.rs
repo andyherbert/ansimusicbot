@@ -53,8 +53,8 @@ impl<T: PlayerPassThrough> Player<T> {
         let full_note = 60.0 * 1000.0 / self.tempo as f32 * 4.0 / length as f32;
         let mut note_length = full_note;
         match self.articulation {
-            Articulation::Legato => note_length *= 3.0 / 4.0,
-            Articulation::Normal => note_length *= 7.0 / 8.0,
+            Articulation::Legato => note_length *= 7.0 / 8.0,
+            Articulation::Normal => note_length *= 3.0 / 4.0,
             Articulation::Stacato => {}
         }
         let mut extra = 0.0;
