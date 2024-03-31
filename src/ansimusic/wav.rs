@@ -64,7 +64,7 @@ impl Default for SquareWave {
     fn default() -> SquareWave {
         SquareWave {
             value: 0.0,
-            sample_rate: 44100,
+            sample_rate: 22050,
             samples: Vec::new(),
         }
     }
